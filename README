@@ -1,0 +1,25 @@
+SQUAWK - Parrot-powered Text-to-speech Service
+==============================================
+
+Overview
+--------
+
+Do you enjoy making computers or phones talk?  Have you ever needed
+a text-to-speech engine that doesn't sound terrible?  Do you want
+to make use of a web service whose name sounds like a parrot's?
+
+Introducing SQUAWK, the parrot-powered text-to-speech service!
+
+The SQUAWK script is a simple web service wrapper around the Amazon
+Polly text-to-speech engine.  It is perfect for use with an Asterisk
+phone system, as it is capable of directly creating output that
+meets Asterisk's rather strict requirements for WAV file formatting,
+while yielding speech that is far more intelligible over the phone
+than output from the text-to-speech programs available natively on
+FreePBX.
+
+SQUAWK is a python script that runs inside of Amazon's Lambda compute
+service.  It uses the Chalice python library to set up a web service
+endpoint in AWS API Gateway that clients can then use to access the
+service.  An API key is required to render text to speech.  Managing
+those API keys is left as an exercise to the reader.
